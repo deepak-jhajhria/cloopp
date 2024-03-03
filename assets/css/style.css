@@ -17,14 +17,14 @@ html {
     --fs-h1: 44px;
     --fs-h1Span: 36px;
     --fs-h2: 28px;
-    --fs-h3: 20px;
+    --fs-h3: 18px;
     --fs-p: 16px;
     --fs-a: 15px;
     --fs-3xl: 24px;
     --lh-hspan: 45.2px;
     --lh-h1: 50px;
     --lh-h2: 32.8px;
-    --lh-h3: 22.72px;
+    --lh-h3: 19.72px;
     --lh-p: 24px;
     --lh-a: 17.2px;
     --bg-black: #0D0D0D;
@@ -201,7 +201,7 @@ a {
 }
 
 .gap-20 {
-    gap: 20px;
+    gap: var(--ReSize-20);
 }
 
 /* height width */
@@ -428,23 +428,26 @@ input::placeholder {
 
 @media (min-width:556px) {
     :root {
-        --fs-h1: 80px;
-        --fs-h1Span: 64px;
-        --fs-h2: 52px;
-        --fs-h3: 24px;
+        --fs-h1: 44px;
+        --fs-h1Span: 36px;
+        --fs-h2: 28px;
+        --fs-h3: 20px;
         --fs-p: 16px;
-        --fs-a: 16px;
+        --fs-a: 15px;
         --fs-3xl: 24px;
-        --lh-hspan: 83.2px;
-        --lh-h1: 83.2px;
-        --lh-h2: 62.4px;
-        --lh-h3: 30.72px;
+        --lh-hspan: 45.2px;
+        --lh-h1: 50px;
+        --lh-h2: 32.8px;
+        --lh-h3: 22.72px;
         --lh-p: 24px;
         --lh-a: 17.2px;
-        --ReSize-13: 13px;
-        --ReSize-20: 20px;
-        --ReSize-15: 15px;
-        --ReSize-80: 80px;
+        --ReSize-13: 8px;
+        --ReSize-20: 10px;
+        --ReSize-14: 14px;
+        --ReSize-80: 30px;
+        --ReSize-32: 32px;
+        --ReSize-40: 40px;
+        --ReSize-120: 120px;
     }
 
     .numSec2 {

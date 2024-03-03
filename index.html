@@ -162,13 +162,30 @@
                             </svg></a>
                     </div>
                 </div>
-                <div class="col-12 mt-5 mt-lg-0 col-lg-6 d-flex justify-content-end"><img class="w-100 max-w-530 min-h-648"
-                        src="./assets/images/headerimg.png" alt="images">
+                <div class="col-12 mt-5 mt-lg-0 col-lg-6 d-flex justify-content-end"><img
+                        class="w-100 max-w-530 min-h-648" src="./assets/images/headerimg.png" alt="images">
                 </div>
             </div>
         </div>
-        <img class="position-absolute bottom-0 start-0 w-100 translate-y-10" src="./assets/images/Vectorheader.png"
-            alt="image">
+        <!-- <img class="position-absolute bottom-0 start-0 w-100 translate-y-10" src="./assets/images/Vectorheader.png"
+            alt="image"> -->
+        <div class="position-absolute bottom-0 start-0 w-100 translate-y-10">
+            <svg width="100%" height="380px" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none" overflow="auto" shape-rendering="auto" fill="#ffffff">
+                <defs>
+                    <path id="wavepath"
+                        d="M 0 2000 0 500 Q 79 374 158 500 t 158 0 158 0 158 0 158 0 158 0 158 0 158 0 158 0  v1000 z" />
+                    <path id="motionpath" d="M -316 0 0 0" />
+                </defs>
+                <g>
+                    <use xlink:href="#wavepath" y="330" fill="#FFF">
+                        <animateMotion dur="5s" repeatCount="indefinite">
+                            <mpath xlink:href="#motionpath" />
+                        </animateMotion>
+                    </use>
+                </g>
+            </svg>
+        </div>
     </header>
     <!-- Creating a Greener World Is Now As Easy As 1-2-3 -->
     <section>
@@ -216,8 +233,8 @@
     <section class="bg-blue">
         <img class="w-100 -translate-y-10" src="./assets/images/Vectorsec3.png" alt="vecter image">
         <div class="container pt-80">
-            <div class="row">
-                <div class="col-6">
+            <div class="row flex-column flex-xl-row">
+                <div class="col-12 col-xl-6">
                     <div class="d-flex flex-column">
                         <h2 class="text-white">Recycling Has Never Been This Easy and Rewarding</h2>
                         <div class="max-w-513 pt-40">
@@ -247,9 +264,10 @@
                                     </svg>
                                 </span>
                                 <div class="accordion-item">
-                                    <h3 class="accordion-item-header icon text-white">Exclusive Coupons & Rewards</h3>
+                                    <h3 class="accordion-item-header accordion-item-header-1 icon text-white">Exclusive
+                                        Coupons & Rewards</h3>
                                     <div class="accordion-item-body">
-                                        <p class="accordion-item-body-content text-white pt-2 mt-1">
+                                        <p class="accordion-item-body-content text-white pt-2 mt-0 mt-sm-1">
                                             Cloopp partners with amazing brands to bring you coupons and deals you
                                             simply can’t get anywhere else.</p>
                                     </div>
@@ -286,7 +304,7 @@
                                     <h3 class="accordion-item-header icon text-white">Track Your Environmental Impact
                                     </h3>
                                     <div class="accordion-item-body">
-                                        <p class="accordion-item-body-content text-white pt-2 mt-1">
+                                        <p class="accordion-item-body-content text-white pt-2 mt-0 mt-sm-1">
                                             Cloopp partners with amazing brands to bring you coupons and deals you
                                             simply can’t get anywhere else.</p>
                                     </div>
@@ -306,7 +324,7 @@
                                 <div class="accordion-item">
                                     <h3 class="accordion-item-header icon text-white">Feel Good</h3>
                                     <div class="accordion-item-body">
-                                        <p class="accordion-item-body-content text-white pt-2 mt-1">
+                                        <p class="accordion-item-body-content text-white pt-2 mt-0 mt-sm-1">
                                             Cloopp partners with amazing brands to bring you coupons and deals you
                                             simply can’t get anywhere else.</p>
                                     </div>
@@ -315,7 +333,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-xl-6 d-flex justify-content-center">
                     <img class="w-100 max-w-617" src="./assets/images/sec3img.png" alt="image">
                 </div>
             </div>
@@ -328,7 +346,7 @@
             <h2 class="text-black text-center">Frequently Asked Questions</h2>
             <div class="accordionSec4 mx-auto pt-40 mb-3">
                 <div class="accordion-item border p-3">
-                    <h3 class="accordion-item-header">What products can I scan?</h3>
+                    <h3 class="accordion-item-header accordion-item-header-2">What products can I scan?</h3>
                     <div class="accordion-item-body">
                         <p class="accordion-item-body-content text-black opacity-75 pt-2 max-w-758 mt-1"> You can scan
                             any product with a barcode before you recycle, no matter what it’s made of. Cloopp rewards
@@ -391,8 +409,8 @@
     <!-- footer  -->
     <footer class="bg-black">
         <div class="container">
-            <div class="row">
-                <div class="col-6">
+            <div class="row flex-column flex-xl-row">
+                <div class="col-12 col-xl-6">
                     <div class="d-flex flex-column gap-3 max-w-345">
                         <a href="index.html">
                             <span>
@@ -432,18 +450,18 @@
                             sustainability.</p>
                     </div>
                 </div>
-                <div class="col-6 d-flex justify-content-between">
-                    <ul class="d-flex flex-column m-0 gap-3">
+                <div class="col-12 col-xl-6 d-flex flex-wrap justify-content-between pt-4 pt-xl-0 gap-4">
+                    <ul class="d-flex flex-column m-0 gap-3 p-0">
                         <li><a class="text-white op-8" href="#aboutUs">About Us</a></li>
                         <li><a class="text-white op-8" href="#aboutUs">How It Works</a></li>
                         <li><a class="text-white op-8" href="#aboutUs">For Brands</a></li>
                         <li><a class="text-white op-8" href="#aboutUs">FAQs</a></li>
                     </ul>
-                    <ul class="d-flex flex-column m-0 gap-3">
+                    <ul class="d-flex flex-column m-0 gap-3 p-0">
                         <li><a class="text-white op-8" href="#aboutUs">Terms & Conditions</a></li>
                         <li><a class="text-white op-8" href="#aboutUs">Privacy Policy</a></li>
                     </ul>
-                    <ul class="d-flex flex-column m-0">
+                    <ul class="d-flex flex-column m-0 p-0 ">
                         <li class="text-white op-8">Follow</li>
                         <div class="d-flex align-content-center gap-10 mt-2 pt-1">
                             <a class="" href="http://instagram.com" target="_blank" rel="noopener noreferrer"><span

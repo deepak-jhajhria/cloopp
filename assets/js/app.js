@@ -38,4 +38,12 @@ accordionItemHeaders.forEach(accordionItemHeader => {
         }
     });
 });
+const defaultAccordionItemHeader = document.querySelector(".accordion-item-header-1");
+if (defaultAccordionItemHeader) {
+    defaultAccordionItemHeader.click();
+}
+const defaultAccordionItemHeader2 = document.querySelector(".accordion-item-header-2");
+if (defaultAccordionItemHeader2) {
+    defaultAccordionItemHeader2.click();
+}
 
