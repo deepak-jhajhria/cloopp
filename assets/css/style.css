@@ -558,11 +558,24 @@ input::placeholder {
     opacity: 0.80;
 }
 
-.socalLinks {
+.socalLinks span {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #313131;
+
+}
+
+.socalLinks {
+    transition: all 300ms linear;
+}
+
+.socalLinks:hover {
+    transform: translateY(-8px);
+    -webkit-transform: translateY(-8px);
+    -moz-transform: translateY(-8px);
+    -ms-transform: translateY(-8px);
+    -o-transform: translateY(-8px);
 }
 
 @media (min-width:556px) {
