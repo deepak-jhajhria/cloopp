@@ -7,10 +7,30 @@
     <title>Cloopp</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body>
+<body class="overflow-hidden">
+    <!-- back-to-top -->
+    <div class="position-fixed bottom-10 end-10 z-50">
+        <button onclick="backToTop()" class="backToTop border-0" id="backToTop">
+            <svg viewBox="0 0 384 512">
+                <path
+                    d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z">
+                </path>
+            </svg>
+        </button>
+    </div>
+    <!-- preloder -->
+    <div id="preloder"
+        class="d-flex position-fixed top-0 start-0 align-items-center justify-content-center w-100 vh-100 bg-white z-100">
+        <div class="loader">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
     <!-- header  -->
     <header class="bg-blue min-h-851 position-relative">
         <!-- nav bar  -->
@@ -65,7 +85,7 @@
                 </div>
             </div>
         </nav>
-        <div class="container">
+        <div id="howItWork" class="container">
             <div class="row flex-column flex-lg-row mt-80 justify-content-between">
                 <div class="d-flex col-12 col-lg-6 flex-column max-w-617 position-relative px-sm-0 pt-80">
                     <span class="position-absolute top-0 left-10"><svg width="80" height="80" viewBox="0 0 80 80"
@@ -169,7 +189,7 @@
         </div>
         <!-- <img class="position-absolute bottom-0 start-0 w-100 translate-y-10" src="./assets/images/Vectorheader.png"
             alt="image"> -->
-        <div class="position-absolute bottom-0 start-0 w-100 translate-y-10">
+        <div class="position-absolute bottom-0 start-0 w-100 translate-y-10 waveMin-h">
             <svg width="100%" height="380px" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"
                 preserveAspectRatio="none" overflow="auto" shape-rendering="auto" fill="#ffffff">
                 <defs>
@@ -186,39 +206,48 @@
                 </g>
             </svg>
         </div>
+        <img class="position-absolute end-0 top-22 w-23 max-w-290" src="./assets/images/headerpositionimg.png"
+            alt="image">
     </header>
     <!-- Creating a Greener World Is Now As Easy As 1-2-3 -->
-    <section>
+    <section id="forBrand" class="position-relative">
         <div class="container pt-4 pt-sm-5 position-relative z-2">
-            <h2 class="text-black max-w-675 text-center mx-auto">Creating a Greener World Is Now As Easy As 1-2-3</h2>
+            <h2 data-aos="fade-up" data-aos-duration="2000" class="text-black max-w-675 text-center mx-auto">Creating a
+                Greener World Is Now As Easy As 1-2-3</h2>
             <div class="container pt-4 pt-lg-5">
                 <div class="row flex-column-reverse flex-lg-row align-items-center justify-content-between">
                     <div class="col-12 col-lg-6 d-flex justify-content-center">
-                        <img class="mt-4 mt-sm-5 mt-lg-0 w-100 max-w-357" src="./assets//images/sec2img.png"
-                            alt="mobile image">
+                        <img data-aos="fade-up" data-aos-duration="2000" class="mt-4 mt-sm-5 mt-lg-0 w-100 max-w-357"
+                            src="./assets//images/sec2img.png" alt="mobile image">
                     </div>
                     <div class="col-12 col-lg-6">
                         <div class="d-flex flex-column max-w-500 gap-4">
                             <div class="d-flex flex-column">
-                                <span class="fs-3xl numSec2">1</span>
-                                <h3 class="text-black pt-20">Scan The Barcode Before Recycling</h3>
-                                <p class="text-black pt-2">Open Cloopp, scan the product's barcode, and rack up points
+                                <span data-aos="fade-up" data-aos-duration="2000" class="fs-3xl numSec2">1</span>
+                                <h3 data-aos="fade-up" data-aos-duration="2000" class="text-black pt-20">Scan The
+                                    Barcode Before Recycling</h3>
+                                <p data-aos="fade-up" data-aos-duration="2000" class="text-black pt-2">Open Cloopp, scan
+                                    the product's barcode, and rack up points
                                     with
                                     every item you keep
                                     out of the landfill.</p>
                             </div>
                             <div class="d-flex flex-column">
-                                <span class="fs-3xl numSec2">2</span>
-                                <h3 class="text-black pt-20">Scan The Barcode Before Recycling</h3>
-                                <p class="text-black pt-2">Open Cloopp, scan the product's barcode, and rack up points
+                                <span data-aos="fade-up" data-aos-duration="2000" class="fs-3xl numSec2">2</span>
+                                <h3 data-aos="fade-up" data-aos-duration="2000" class="text-black pt-20">Scan The
+                                    Barcode Before Recycling</h3>
+                                <p data-aos="fade-up" data-aos-duration="2000" class="text-black pt-2">Open Cloopp, scan
+                                    the product's barcode, and rack up points
                                     with
                                     every item you keep
                                     out of the landfill.</p>
                             </div>
                             <div class="d-flex flex-column">
-                                <span class="fs-3xl numSec2">3</span>
-                                <h3 class="text-black pt-20">Scan The Barcode Before Recycling</h3>
-                                <p class="text-black pt-2">Open Cloopp, scan the product's barcode, and rack up points
+                                <span data-aos="fade-up" data-aos-duration="2000" class="fs-3xl numSec2">3</span>
+                                <h3 data-aos="fade-up" data-aos-duration="2000" class="text-black pt-20">Scan The
+                                    Barcode Before Recycling</h3>
+                                <p data-aos="fade-up" data-aos-duration="2000" class="text-black pt-2">Open Cloopp, scan
+                                    the product's barcode, and rack up points
                                     with
                                     every item you keep
                                     out of the landfill.</p>
@@ -228,17 +257,21 @@
                 </div>
             </div>
         </div>
+        <img class="position-absolute start-0 top-22 w-23 max-w-240" src="./assets/images/sec2positionimg.png"
+            alt="image">
     </section>
     <!-- Recycling Has Never Been This Easy and Rewarding -->
-    <section class="bg-blue">
+    <section id="about" class="bg-blue position-relative">
         <img class="w-100 -translate-y-10" src="./assets/images/Vectorsec3.png" alt="vecter image">
-        <div class="container pt-80">
+        <div class="container pt-80 pb-4">
             <div class="row flex-column flex-xl-row">
-                <div class="col-12 col-xl-6">
+                <div class="col-12 col-xl-6 pb-120">
                     <div class="d-flex flex-column">
-                        <h2 class="text-white">Recycling Has Never Been This Easy and Rewarding</h2>
+                        <h2 data-aos="fade-up" data-aos-duration="2000" class="text-white">Recycling Has Never Been This
+                            Easy and Rewarding</h2>
                         <div class="max-w-513 pt-40">
-                            <div class="d-flex border py-3 px-20 accordionSec3 gap-20 align-items-start">
+                            <div data-aos="fade-up" data-aos-duration="2000"
+                                class="d-flex border py-3 px-20 accordionSec3 gap-20 align-items-start">
                                 <span><svg width="41" height="40" viewBox="0 0 41 40" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_1075_73)">
@@ -273,7 +306,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="d-flex border py-3 px-20 accordionSec3 gap-20 align-items-start mt-4">
+                            <div data-aos="fade-up" data-aos-duration="2000"
+                                class="d-flex border py-3 px-20 accordionSec3 gap-20 align-items-start mt-4">
                                 <span><svg width="41" height="40" viewBox="0 0 41 40" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -310,7 +344,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="d-flex border py-3 px-20 accordionSec3 gap-20 align-items-start mt-4">
+                            <div data-aos="fade-up" data-aos-duration="2000"
+                                class="d-flex border py-3 px-20 accordionSec3 gap-20 align-items-start mt-4">
                                 <span><svg width="41" height="40" viewBox="0 0 41 40" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -334,17 +369,20 @@
                     </div>
                 </div>
                 <div class="col-12 col-xl-6 d-flex justify-content-center">
-                    <img class="w-100 max-w-617" src="./assets/images/sec3img.png" alt="image">
+                    <img data-aos="fade-up" data-aos-duration="2000" class="w-100 max-w-617"
+                        src="./assets/images/sec3img.png" alt="image">
                 </div>
             </div>
         </div>
-        <img class="w-100 translate-y-10" src="./assets/images/Vectorsec3bottom.png" alt="vecter image">
+        <img class="w-100 translate-y-10 position-absolute bottom-0" src="./assets/images/Vectorsec3bottom.png"
+            alt="vecter image">
     </section>
     <!-- Frequently Asked Questions -->
-    <section>
-        <div class="container">
-            <h2 class="text-black text-center">Frequently Asked Questions</h2>
-            <div class="accordionSec4 mx-auto pt-40 mb-3">
+    <section id="faq" class="pt-40 position-relative">
+        <div class="container position-relative z-2">
+            <h2 data-aos="fade-up" data-aos-duration="2000" class="text-black text-center pt-2">Frequently Asked Questions
+            </h2>
+            <div data-aos="fade-up" data-aos-duration="2000" class="accordionSec4 mx-auto pt-40 mb-3">
                 <div class="accordion-item border p-3">
                     <h3 class="accordion-item-header accordion-item-header-2">What products can I scan?</h3>
                     <div class="accordion-item-body">
@@ -354,7 +392,7 @@
                     </div>
                 </div>
             </div>
-            <div class="accordionSec4 mx-auto mb-3">
+            <div data-aos="fade-up" data-aos-duration="2000" class="accordionSec4 mx-auto mb-3">
                 <div class="accordion-item border p-3">
                     <h3 class="accordion-item-header">Where can I use my rewards?</h3>
                     <div class="accordion-item-body">
@@ -364,7 +402,7 @@
                     </div>
                 </div>
             </div>
-            <div class="accordionSec4 mx-auto mb-3">
+            <div data-aos="fade-up" data-aos-duration="2000" class="accordionSec4 mx-auto mb-3">
                 <div class="accordion-item border p-3">
                     <h3 class="accordion-item-header">What kind of impact can I make?</h3>
                     <div class="accordion-item-body">
@@ -374,7 +412,7 @@
                     </div>
                 </div>
             </div>
-            <div class="accordionSec4 mx-auto mb-3">
+            <div data-aos="fade-up" data-aos-duration="2000" class="accordionSec4 mx-auto mb-3">
                 <div class="accordion-item border p-3">
                     <h3 class="accordion-item-header">Which brands do you partner with?</h3>
                     <div class="accordion-item-body">
@@ -385,33 +423,57 @@
                 </div>
             </div>
         </div>
+        <img class="position-absolute end-0 top-0 w-23 max-w-290" src="./assets/images/sec3positionimg.png" alt="image">
     </section>
     <!-- Subscribe Newsletter -->
-    <section class="bg-blue">
-        <img class="w-100 -translate-y-10" src="./assets/images/Vectorsec4.png" alt="image">
+    <section id="careers" class="bg-blue position-relative pb-2 pb-sm-3 pb-md-5">
+        <img class="w-100 -translate-y-10 position-relative z-2" src="./assets/images/Vectorsec4.png" alt="image">
         <div class="container py-120">
-            <h2 class="text-white text-center">Subscribe Newsletter</h2>
-            <p class="text-white mt-3 opacity-75 text-center">Subscribe to our newsletter for the latest news, offers,
+            <h2 data-aos="fade-up" data-aos-duration="2000" class="text-white text-center pt-1 pt-sm-3 pt-md-4">Subscribe Newsletter</h2>
+            <p data-aos="fade-up" data-aos-duration="2000" class="text-white mt-2 mt-sm-3 opacity-75 text-center">
+                Subscribe to our newsletter for the latest news,
+                offers,
                 and eco-tips.
             </p>
-            <form action="/index.html">
+            <form class="pb-2 pb-sm-3 pb-md-4" data-aos="fade-up" data-aos-duration="2000" action="/index.html">
                 <label for="email"
-                    class="d-flex mt-40 emailLabel max-w-503 mx-auto border justify-content-between mb-5">
+                    class="d-flex mt-40 emailLabel max-w-503 mx-auto border justify-content-between mb-3 mb-sm-4 mb-md-5">
                     <input class="bg-transparent border-0 px-20 py-18 w-100 text-white fw-normal" type="email"
                         id="email" placeholder="Enter your email" required>
-                    <button class="bg-white text-blue fw-semibold text-sm lh-base py-3 px-32 rounded-2 border-0"
+                    <button class="bg-white text-blue fw-semibold text-sm lh-base py-2 py-sm-3 px-32 rounded-2 border-0"
                         type="submit">Join</button>
                 </label>
             </form>
         </div>
-        <img class="w-100 translate-y-10" src="./assets/images/Vectorsec4bottom.png" alt="image">
+        <!-- <img class="w-100 translate-y-10 position-relative z-2" src="./assets/images/Vectorsec4bottom.png" alt="image"> -->
+        <div class="position-absolute bottom-0 start-0 w-100 translate-y-10 waveMin-h">
+            <svg width="100%" height="380px" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none" overflow="auto" shape-rendering="auto" fill="#0D0D0D">
+                <defs>
+                    <path id="wavepath"
+                        d="M 0 2000 0 500 Q 79 374 158 500 t 158 0 158 0 158 0 158 0 158 0 158 0 158 0 158 0  v1000 z" />
+                    <path id="motionpath" d="M -316 0 0 0" />
+                </defs>
+                <g>
+                    <use xlink:href="#wavepath" y="330" fill="#0D0D0D">
+                        <animateMotion dur="5s" repeatCount="indefinite">
+                            <mpath xlink:href="#motionpath" />
+                        </animateMotion>
+                    </use>
+                </g>
+            </svg>
+        </div>
+        <img class="position-absolute start-0 w-23 max-w-290 -top-5" src="./assets/images/sec4positionimg1.png"
+            alt="image">
+        <img class="position-absolute end-0 w-23 max-w-290 -bottom-5" src="./assets/images/sec4positionimg2.png"
+            alt="image">
     </section>
     <!-- footer  -->
-    <footer class="bg-black">
+    <footer id="F" class="bg-black pt-80">
         <div class="container">
             <div class="row flex-column flex-xl-row">
                 <div class="col-12 col-xl-6">
-                    <div class="d-flex flex-column gap-3 max-w-345">
+                    <div class="d-flex flex-column gap-0 gap-sm-3 max-w-345">
                         <a href="index.html">
                             <span>
                                 <svg class="logo w-100" height="64" viewBox="0 0 147 64" fill="none"
@@ -451,15 +513,15 @@
                     </div>
                 </div>
                 <div class="col-12 col-xl-6 d-flex flex-wrap justify-content-between pt-4 pt-xl-0 gap-4">
-                    <ul class="d-flex flex-column m-0 gap-3 p-0">
-                        <li><a class="text-white op-8" href="#aboutUs">About Us</a></li>
-                        <li><a class="text-white op-8" href="#aboutUs">How It Works</a></li>
-                        <li><a class="text-white op-8" href="#aboutUs">For Brands</a></li>
-                        <li><a class="text-white op-8" href="#aboutUs">FAQs</a></li>
+                    <ul class="d-flex flex-column m-0 gap-2 gap-sm-3 p-0">
+                        <li><a class="text-white op-8 footerLinks" href="#about">About Us</a></li>
+                        <li><a class="text-white op-8 footerLinks" href="#howItWork">How It Works</a></li>
+                        <li><a class="text-white op-8 footerLinks" href="#forBrand">For Brands</a></li>
+                        <li><a class="text-white op-8 footerLinks" href="#faq">FAQs</a></li>
                     </ul>
-                    <ul class="d-flex flex-column m-0 gap-3 p-0">
-                        <li><a class="text-white op-8" href="#aboutUs">Terms & Conditions</a></li>
-                        <li><a class="text-white op-8" href="#aboutUs">Privacy Policy</a></li>
+                    <ul class="d-flex flex-column m-0 gap-2 gap-sm-3 p-0">
+                        <li><a class="text-white op-8 footerLinks" href="#F">Terms & Conditions</a></li>
+                        <li><a class="text-white op-8 footerLinks" href="#F">Privacy Policy</a></li>
                     </ul>
                     <ul class="d-flex flex-column m-0 p-0 ">
                         <li class="text-white op-8">Follow</li>
@@ -511,6 +573,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true });
+    </script>
     <script src="./assets/js/app.js"></script>
 </body>
 

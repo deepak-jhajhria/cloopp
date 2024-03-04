@@ -18,25 +18,26 @@ html {
     --fs-h1Span: 36px;
     --fs-h2: 28px;
     --fs-h3: 18px;
-    --fs-p: 16px;
+    --fs-p: 14px;
     --fs-a: 15px;
     --fs-3xl: 24px;
     --lh-hspan: 45.2px;
     --lh-h1: 50px;
     --lh-h2: 32.8px;
     --lh-h3: 19.72px;
-    --lh-p: 24px;
+    --lh-p: 21px;
     --lh-a: 17.2px;
     --bg-black: #0D0D0D;
     --blue-nav: #0576B3;
     --blue: #0073B1;
     --ReSize-13: 8px;
     --ReSize-20: 10px;
-    --ReSize-14: 14px;
+    --ReSize-14: 8px;
+    --ReSize-18: 14px;
     --ReSize-80: 30px;
-    --ReSize-32: 32px;
-    --ReSize-40: 40px;
-    --ReSize-120: 120px;
+    --ReSize-32: 18px;
+    --ReSize-40: 20px;
+    --ReSize-120: 40px;
 }
 
 /* font size */
@@ -157,6 +158,10 @@ a {
     padding-bottom: var(--ReSize-120);
 }
 
+.pb-120 {
+    padding-bottom: var(--ReSize-120);
+}
+
 .mt-80 {
     margin-top: var(--ReSize-80);
 }
@@ -213,6 +218,14 @@ a {
     max-width: 617px;
 }
 
+.max-w-290 {
+    max-width: 290px;
+}
+
+.max-w-240 {
+    max-width: 240px;
+}
+
 .max-w-675 {
     max-width: 675px;
 }
@@ -245,9 +258,29 @@ a {
     max-width: 345px;
 }
 
+.w-23 {
+    width: 23%;
+}
+
+.waveMin-h svg {
+    height: 100px;
+}
+
 /* position */
 .top-10 {
     top: 10%;
+}
+
+.-top-5 {
+    top: -5%;
+}
+
+.-bottom-5 {
+    bottom: -7%;
+}
+
+.top-22 {
+    top: 22%;
 }
 
 .bottom-10 {
@@ -263,14 +296,107 @@ a {
     position: relative;
     transition: color 0.3s ease-in-out;
     overflow: hidden;
+    opacity: 0.9;
 }
 
-.navLinks::after {
+.footerLinks {
+    position: relative;
+    transition: color 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.loader {
+    display: flex;
+    align-items: center;
+}
+
+.bar {
+    display: inline-block;
+    width: 8px;
+    height: 35px;
+    background-color: white;
+    border-radius: 10px;
+    animation: scale-up4 1s linear infinite;
+}
+
+.bar:nth-child(2) {
+    height: 60px;
+    margin: 0 5px;
+    animation-delay: 0.25s;
+}
+
+.bar:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+@keyframes scale-up4 {
+    20% {
+        background-color: #0073B1;
+        transform: scaleY(1.5);
+    }
+
+    40% {
+        transform: scaleY(1);
+    }
+}
+
+.bottom-10 {
+    bottom: 10px;
+}
+
+.end-10 {
+    right: 10px;
+}
+
+.backToTop {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #0576B3;
+    font-weight: bold;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(180, 160, 255, 0.253);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.backToTop:hover {
+    background-image: linear-gradient(to br, #4febf6, #0073B1);
+    box-shadow: 0 0 20px 1px #4febf6;
+}
+
+.backToTop svg {
+    width: 1rem;
+    fill: white;
+    transition: fill 0.3s ease-in-out;
+}
+
+.backToTop:hover svg {
+    fill: black;
+}
+
+.z-50 {
+    z-index: 50 !important;
+}
+
+.z-100 {
+    z-index: 100;
+}
+
+.z-40 {
+    z-index: 40;
+}
+
+.navLinks::after,
+.footerLinks::after {
     content: "";
     position: absolute;
     width: 0;
-    height: 3px;
-    background-color: #02cdcf;
+    height: 2.5px;
+    background-color: #FFD;
     border-radius: 4px;
     left: 0;
     bottom: -2px;
@@ -282,8 +408,13 @@ a {
     -o-transition: all 300ms ease-in-out;
 }
 
-.navLinks:hover::after {
+.navLinks:hover::after,
+.footerLinks:hover::after {
     width: 100%;
+    opacity: 1;
+}
+
+.navLinks:hover {
     opacity: 1;
 }
 
@@ -362,18 +493,19 @@ a {
     align-items: center;
     position: relative;
     cursor: pointer;
+    padding-right: 20px;
 }
 
 .accordion-item-header::after {
     content: url('data:image/svg+xml,<svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.8" clip-path="url(%23clip0_1075_1021)"><path d="M17.5116 3.34819C17.1805 2.71304 16.4368 2.47419 15.8613 2.82161C15.7039 2.9139 14.4336 4.18961 12.4196 6.2959C10.6608 8.1199 9.20591 9.61819 9.18963 9.61819C9.17334 9.61819 7.71849 8.1199 5.95963 6.29047C3.94563 4.18961 2.67534 2.9139 2.51791 2.82161C2.0782 2.55561 1.44306 2.64247 1.10106 3.01161C0.759058 3.3699 0.666772 3.9779 0.9002 4.39047C0.965343 4.51533 2.70249 6.36104 4.75449 8.49447C7.63163 11.4856 8.54363 12.3976 8.70649 12.4628C8.97791 12.5713 9.40134 12.5713 9.67277 12.4628C9.83563 12.3976 10.7368 11.4965 13.6248 8.49447C15.6768 6.36104 17.4139 4.51533 17.4845 4.39047C17.6311 4.12447 17.6473 3.5979 17.5116 3.34819Z" fill="%230D0D0D"/></g><defs><clipPath id="clip0_1075_1021"><rect width="20" height="15.7895" fill="white" transform="translate(0.187012 0.105225)"/></clipPath></defs></svg>');
     position: absolute;
-    right: 1rem;
+    right: 0;
 }
 
 .minus::after {
     content: url('data:image/svg+xml,<svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.31729 1.13028C8.22632 1.17965 8.11653 1.26522 8.07575 1.32446C7.89381 1.5746 7.90322 1.36396 7.90322 5.16202V8.65071L4.5373 8.65729L1.16824 8.66717L1.01453 8.7659C0.920424 8.82844 0.826317 8.92717 0.766715 9.02591C0.682018 9.17401 0.672607 9.21351 0.672607 9.47351C0.672607 9.73352 0.682018 9.77301 0.766715 9.92112C0.826317 10.0199 0.920424 10.1186 1.01453 10.1811L1.16824 10.2799L4.5373 10.2897L7.90322 10.2963L7.90949 13.8278L7.9189 17.3626L8.01301 17.5238C8.07261 17.6226 8.16672 17.7213 8.26083 17.7838C8.40199 17.8727 8.43963 17.8826 8.68745 17.8826C8.93527 17.8826 8.97291 17.8727 9.11407 17.7838C9.20818 17.7213 9.30229 17.6226 9.36189 17.5238L9.456 17.3626L9.46541 13.8278L9.47168 10.2963L12.8376 10.2897L16.2067 10.2799L16.3604 10.1811C16.4545 10.1186 16.5486 10.0199 16.6082 9.92112C16.6929 9.77301 16.7023 9.73352 16.7023 9.47351C16.7023 9.21351 16.6929 9.17401 16.6082 9.02591C16.5486 8.92717 16.4545 8.82844 16.3604 8.7659L16.2067 8.66717L12.8376 8.65729L9.47168 8.65071L9.46541 5.11924L9.456 1.58447L9.36189 1.4232C9.21759 1.17965 9.01996 1.06775 8.72196 1.05459C8.51492 1.04471 8.46159 1.05459 8.31729 1.13028Z" fill="white" stroke="white"/></svg>');
     position: absolute;
-    right: 1rem;
+    right: 0;
 }
 
 
@@ -406,6 +538,13 @@ a {
 
 button {
     color: var(--blue) !important;
+    transition: color 0.3s ease-in-out;
+}
+
+button:hover {
+    color: white !important;
+    background-color: var(--blue) !important;
+    outline: 1px solid white;
 }
 
 input {
@@ -430,7 +569,7 @@ input::placeholder {
     :root {
         --fs-h1: 44px;
         --fs-h1Span: 36px;
-        --fs-h2: 28px;
+        --fs-h2: 32px;
         --fs-h3: 20px;
         --fs-p: 16px;
         --fs-a: 15px;
@@ -444,6 +583,7 @@ input::placeholder {
         --ReSize-13: 8px;
         --ReSize-20: 10px;
         --ReSize-14: 14px;
+        --ReSize-18: 18px;
         --ReSize-80: 30px;
         --ReSize-32: 32px;
         --ReSize-40: 40px;
@@ -458,19 +598,23 @@ input::placeholder {
     .logo {
         max-width: 157px;
     }
+
+    .waveMin-h svg {
+        height: 140px;
+    }
 }
 
 @media (min-width:768px) {
     :root {
         --fs-h1: 80px;
         --fs-h1Span: 64px;
-        --fs-h2: 52px;
+        --fs-h2: 45px;
         --fs-h3: 24px;
         --fs-p: 16px;
         --fs-a: 16px;
         --lh-hspan: 83.2px;
         --lh-h1: 83.2px;
-        --lh-h2: 62.4px;
+        --lh-h2: 55.4px;
         --lh-h3: 30.72px;
         --lh-p: 24px;
         --lh-a: 17.2px;
@@ -478,6 +622,10 @@ input::placeholder {
         --ReSize-20: 20px;
         --ReSize-15: 15px;
         --ReSize-80: 80px;
+    }
+
+    .waveMin-h svg {
+        height: 150px;
     }
 }
 
@@ -503,6 +651,10 @@ input::placeholder {
 
     .max-w-500 {
         max-width: 500px;
+    }
+
+    .waveMin-h svg {
+        height: 300px;
     }
 }
 

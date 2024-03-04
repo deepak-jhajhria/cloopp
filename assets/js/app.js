@@ -22,6 +22,29 @@ function overflowRemoveButton() {
     document.getElementById('span2').classList.remove('span2')
     document.getElementById('span3').classList.remove('span3')
 }
+
+// preloder
+setTimeout(() => {
+    document.getElementById("preloder").classList.add("d-none");
+    document.body.classList.remove("overflow-hidden");
+}, 3000);
+
+
+
+// backtotop
+function backToTop() {
+    window.scrollTo(0, 0);
+}
+document.getElementById('backToTop').addEventListener("click", backToTop)
+window.addEventListener("scroll", function () {
+    const mybackto = document.getElementById("backToTop");
+    if (window.scrollY > 500) {
+        mybackto.style.display = "block";
+    } else {
+        mybackto.style.display = "none";
+    }
+});
+
 const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
 
 accordionItemHeaders.forEach(accordionItemHeader => {
