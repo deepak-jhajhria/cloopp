@@ -22,14 +22,11 @@ function overflowRemoveButton() {
     document.getElementById('span2').classList.remove('span2')
     document.getElementById('span3').classList.remove('span3')
 }
-
 // preloder
 setTimeout(() => {
     document.getElementById("preloder").classList.add("d-none");
     document.body.classList.remove("overflow-hidden");
 }, 3000);
-
-
 
 // backtotop
 function backToTop() {
@@ -45,8 +42,8 @@ window.addEventListener("scroll", function () {
     }
 });
 
-const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
 
+const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
 accordionItemHeaders.forEach(accordionItemHeader => {
     accordionItemHeader.addEventListener("click", event => {
         accordionItemHeader.classList.toggle("active");
