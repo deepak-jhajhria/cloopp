@@ -336,7 +336,7 @@ a {
 
 @keyframes scale-up4 {
     20% {
-        background-color: #0073B1;
+        background-color: #FFF;
         transform: scaleY(1.5);
     }
 
