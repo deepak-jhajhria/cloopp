@@ -259,6 +259,7 @@ a {
 }
 
 .max-h-667 {
+    min-height: 667px;
     max-height: 682px;
 }
 
