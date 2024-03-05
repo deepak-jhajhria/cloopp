@@ -258,6 +258,10 @@ a {
     max-width: 345px;
 }
 
+.max-h-667 {
+    max-height: 682px;
+}
+
 .w-23 {
     width: 23%;
 }
