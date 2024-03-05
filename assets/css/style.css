@@ -258,10 +258,6 @@ a {
     max-width: 345px;
 }
 
-.max-h-667 {
-    min-height: 667px;
-    max-height: 682px;
-}
 
 .w-23 {
     width: 23%;
@@ -679,6 +675,10 @@ input::placeholder {
 @media (min-width: 1200px) {
     .min-h-648 {
         min-height: 648px;
+    }
+    .max-h-667 {
+        min-height: 667px;
+        max-height: 682px;
     }
 }
 
